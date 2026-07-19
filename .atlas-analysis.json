@@ -1,0 +1,95 @@
+{
+  "projectType": "saas",
+  "projectName": "Stickee",
+  "projectDescription": "A modern web and desktop app for managing digital sticky notes with cloud sync, checklists, rich customization, and voice input.",
+  "theme": "almond",
+  "primaryColor": "#f5e9be",
+  "lightColor": "#8c7a6c",
+  "darkColor": "#766045",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Notes",
+            "pages": [
+              "notes/creating-notes",
+              "notes/organizing-notes",
+              "notes/statuses",
+              "notes/pinning-archiving"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/checklists",
+              "features/voice-input",
+              "features/search",
+              "features/emoji-reactions",
+              "features/quick-note"
+            ]
+          },
+          {
+            "group": "Customization",
+            "pages": [
+              "customization/themes",
+              "customization/fonts",
+              "customization/note-colors"
+            ]
+          },
+          {
+            "group": "Data & Settings",
+            "pages": [
+              "data/export-import",
+              "data/encryption",
+              "settings/keyboard-shortcuts",
+              "settings/desktop-app"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Create, edit, and delete sticky notes with titles, content, colors, and statuses",
+    "Drag-and-drop note reordering in grid or list view",
+    "Note statuses: To-Do, Doing, Done, Backlog",
+    "Pin important notes to the top",
+    "Archive notes for later reference",
+    "Checklists inside notes with nested task support",
+    "Voice input to create and edit notes",
+    "Real-time full-text search across content, titles, colors, and statuses",
+    "Emoji reactions on notes",
+    "Quick Note popup (Alt+P shortcut)",
+    "60+ font choices including handwriting styles",
+    "10 note color options",
+    "Light and dark theme support",
+    "Automatic URL detection in note content",
+    "Cloud sync via Supabase with note content encryption",
+    "Export/import all notes and data as JSON",
+    "Desktop app via Tauri (Windows, macOS, Linux)"
+  ],
+  "publicApiSurface": [
+    "Magic link email authentication (passwordless sign-in)",
+    "Note CRUD: createNote, getNotes, updateNote, deleteNote",
+    "Note statuses: To-Do | Doing | Done | Backlog",
+    "Note colors: yellow, pink, blue, green, purple, orange, teal, lavender, peach, mint",
+    "archiveNote, unarchiveNote, getArchivedNotes, deleteArchivedNote",
+    "checklistService: getItems, addItem, toggleItem, deleteItem",
+    "toggleReaction (emoji reactions)",
+    "exportUserData, downloadExportFile, importUserData",
+    "Voice commands: new note, edit note, show archived",
+    "Keyboard shortcuts: N (new note), Alt+P (quick note window)",
+    "Font settings: basic fonts, handwriting fonts, favorite fonts",
+    "View modes: grid, list"
+  ]
+}

@@ -1,0 +1,51 @@
+---
+title: "Keyboard Shortcuts for Faster Note-Taking in Stickee"
+sidebarTitle: "Keyboard Shortcuts"
+description: "Speed up your Stickee workflow with keyboard shortcuts for creating notes, opening the Quick Note popup, and navigating your board."
+---
+
+Keyboard shortcuts let you interact with Stickee without ever reaching for the mouse. Whether you want to capture a thought instantly or quickly dismiss a dialog, Stickee's shortcuts keep you in flow.
+
+## Available Shortcuts
+
+| Shortcut | Action |
+|---|---|
+| `N` | Create a new note |
+| `Alt` + `P` | Open the Quick Note popup |
+| `Ctrl` + `Enter` / `Cmd` + `Enter` | Save / confirm in Quick Note |
+| `Escape` | Close Quick Note without saving |
+
+<Note>
+  On macOS, use `Cmd` in place of `Ctrl` wherever applicable.
+</Note>
+
+## Using Shortcuts Effectively
+
+<CardGroup cols={2}>
+  <Card title="N — New Note" icon="plus">
+    Press `N` from anywhere on the main board to instantly open the new note dialog. You can start typing immediately without touching the mouse.
+  </Card>
+  <Card title="Alt+P — Quick Note" icon="bolt">
+    `Alt`+`P` opens the Quick Note popup, perfect for capturing a fast idea without navigating away from what you are doing. Type your note and press `Ctrl`+`Enter` to save it.
+  </Card>
+  <Card title="Ctrl+Enter — Save" icon="floppy-disk">
+    While the Quick Note popup is open, press `Ctrl`+`Enter` (or `Cmd`+`Enter` on macOS) to save and close. Your note appears on the board instantly.
+  </Card>
+  <Card title="Escape — Dismiss" icon="xmark">
+    Press `Escape` to close the Quick Note popup or any open dialog without saving. Nothing is created or changed.
+  </Card>
+</CardGroup>
+
+<Tip>
+  If pressing `N` does not open the new note dialog, click anywhere on the main board first. Stickee only listens for the `N` shortcut when the board has keyboard focus — not when an input field, dialog, or another element is active.
+</Tip>
+
+## How Shortcuts Interact with Dialogs
+
+Stickee is smart about when shortcuts fire. The `N` and `Alt`+`P` shortcuts are intentionally disabled when:
+
+- A note creation or editing dialog is already open
+- The Quick Note popup is already visible
+- Your cursor is inside a text input or textarea
+
+This prevents accidental triggers while you are actively writing. Once you close any open dialog, shortcuts become active again immediately.

@@ -1,0 +1,72 @@
+---
+title: "Voice Input: Dictate Notes and Commands in Stickee"
+sidebarTitle: "Voice Input"
+description: "Use Stickee's voice input to dictate new notes and issue voice commands hands-free, powered by your browser's speech recognition API."
+---
+
+Stickee's **voice input** lets you create and dictate notes without touching your keyboard. Speak naturally and your words appear as note content in real time — perfect for capturing ideas on the fly or when your hands are busy.
+
+<Note>
+  Voice input requires microphone permission. Your browser will prompt you to allow microphone access the first time you start recording. You must grant this permission for voice input to work.
+</Note>
+
+## Using Voice Input
+
+<Steps>
+  <Step title="Click the microphone icon">
+    Open the note editor and click the **microphone (🎤) icon** to open the Voice Recorder. The button label reads **Start Voice** when idle.
+  </Step>
+  <Step title="Speak clearly">
+    Once recording starts, the button turns red and pulses with a **Listening…** indicator. Speak at a natural pace — your words appear as a live transcript below the button as Stickee hears them.
+  </Step>
+  <Step title="Stop recording">
+    Click the **Stop Recording** button (or click the mic icon again) to finish. Stickee processes your final transcript and carries out the appropriate action.
+  </Step>
+  <Step title="Review and edit">
+    If your speech was captured as note content, review the transcribed text in the note editor before saving. You can edit any mis-recognized words just like normal text.
+  </Step>
+</Steps>
+
+## Voice Commands
+
+Stickee understands a set of spoken commands. Say one of the phrases below and Stickee acts immediately — no clicking required.
+
+<AccordionGroup>
+  <Accordion title='"New note" — create a note'>
+    Say **"new note"**, **"create note"**, or **"add note"** to open a brand-new sticky note. You can follow it with content in the same breath — for example, *"new note: call the dentist"* — and Stickee will pre-fill the note with that text.
+  </Accordion>
+  <Accordion title='"Edit note [number]" — open a note for editing'>
+    Say **"edit note 3"** (or use ordinal words like **"edit note third"**) to open the third note on your board for editing. Stickee maps the spoken number or word to the note's position.
+  </Accordion>
+  <Accordion title='"Show archived" — view archived notes'>
+    Say **"show archived"**, **"view archived"**, or **"archived notes"** to jump straight to your archive. No navigation needed.
+  </Accordion>
+  <Accordion title="Everything else — dictate content">
+    Any speech that doesn't match a command is treated as **note content**. Stickee creates a new note and inserts your words directly into it.
+  </Accordion>
+</AccordionGroup>
+
+## Browser Requirements
+
+<Tabs>
+  <Tab title="Supported browsers">
+    Voice input uses the **Web Speech API** built into modern browsers. It works best in:
+
+    - **Google Chrome** (recommended)
+    - **Microsoft Edge**
+    - Any other **Chromium-based** browser (Brave, Arc, Opera, etc.)
+    - **Stickee desktop app** (Tauri) — uses the same Chromium engine, so voice input works out of the box
+  </Tab>
+  <Tab title="Limited support">
+    The following browsers have **partial or no support** for the Web Speech API:
+
+    - **Firefox** — the Speech Recognition API is not enabled by default; voice input may not appear or function
+    - **Safari** — support is limited and may behave inconsistently
+
+    If you rely on voice input, switch to Chrome or the Stickee desktop app for the best experience.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Speech recognition runs entirely in your browser using the Web Speech API. Stickee does not transmit your audio to any Stickee server. Note that your browser vendor (e.g., Google for Chrome) may process audio as part of the browser's own Speech API implementation.
+</Warning>

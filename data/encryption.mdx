@@ -1,0 +1,82 @@
+---
+title: "How Stickee Encrypts and Protects Your Notes and Titles"
+sidebarTitle: "Encryption"
+description: "Stickee encrypts your note titles and content before they are stored, keeping your private thoughts safe and unreadable to anyone else."
+---
+
+Every note you create in Stickee is encrypted before it ever touches the database. Your note titles and content are encrypted and stored in protected form — meaning the raw text of your thoughts is never left exposed in storage.
+
+<Note>
+  Encryption and decryption happen automatically in the background. There is nothing you need to configure or enable — your notes are always protected.
+</Note>
+
+## What Is Encrypted
+
+Stickee encrypts the following fields for every note before storing them:
+
+<CardGroup cols={2}>
+  <Card title="Note Content" icon="lock">
+    The body of every note is encrypted before leaving your device. Nobody with direct database access can read what you have written.
+  </Card>
+  <Card title="Note Titles" icon="lock">
+    Optional note titles receive the same encryption treatment as content — your titles are never stored as plain text.
+  </Card>
+</CardGroup>
+
+Both fields are encrypted and stored in protected form in the database. When you open a note, Stickee decrypts the content automatically so you can read it.
+
+## What Is Not Encrypted
+
+Some metadata fields are stored unencrypted because they are needed to power sorting, filtering, and display features:
+
+| Field | Stored as |
+|---|---|
+| Note color | Plain text |
+| Note status (To-Do, Doing, Done, Backlog) | Plain text |
+| Pinned state | Plain boolean |
+| Archived state | Plain boolean |
+| Timestamps (`created_at`, `updated_at`) | Plain timestamp |
+| Checklist item text | Plain text |
+| Emoji reactions | Plain text |
+
+<Info>
+  Checklist items and emoji reactions are stored unencrypted. Avoid putting highly sensitive information in checklist task text if you need the same level of protection as note content.
+</Info>
+
+## Why This Matters
+
+<Accordion title="Protection against unauthorized database access">
+  Even if someone were to access the Stickee database directly — through a breach or misconfiguration — they would only see encrypted strings for note content and titles. Without the decryption process on your device, the data is unreadable.
+</Accordion>
+
+<Accordion title="Your private thoughts stay private">
+  Notes often contain sensitive information: personal reflections, project ideas, passwords reminders, financial notes. Encrypting the content means that privacy is enforced at the storage layer, not just the access layer.
+</Accordion>
+
+<Accordion title="No configuration needed">
+  Encryption is built into the note save and load flow. Every time Stickee saves a note, it encrypts the content first. Every time it loads a note, it decrypts before displaying. You get protection automatically on every note you create.
+</Accordion>
+
+## Account Security
+
+Your Stickee account uses **magic link authentication** — there is no password associated with your account. This removes the most common attack vector for account takeover.
+
+Here is how the sign-in flow works:
+
+<Steps>
+  <Step title="Enter your email">
+    Type your email address on the Stickee sign-in screen.
+  </Step>
+  <Step title="Check your inbox">
+    Stickee sends a magic sign-in link to your email. The link expires quickly, so use it promptly.
+  </Step>
+  <Step title="Click the link">
+    Clicking the link signs you in immediately — no password required, no credentials to steal.
+  </Step>
+</Steps>
+
+Since your sign-in security depends entirely on access to your email inbox, always use a **secure, private email account** for your Stickee sign-in address.
+
+<Tip>
+  For the highest level of note privacy, consider using an encrypted email provider (such as Proton Mail) as the email address tied to your Stickee account. This ensures that even your sign-in link is protected end-to-end.
+</Tip>

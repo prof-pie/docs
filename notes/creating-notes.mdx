@@ -1,0 +1,86 @@
+---
+title: "Creating, Editing, and Deleting Sticky Notes in Stickee"
+sidebarTitle: "Creating Notes"
+description: "Learn how to create, edit, and delete sticky notes in Stickee. Add titles, choose colors, and set statuses to keep your board organized."
+---
+
+Stickee gives you a full set of tools to create, customize, and manage your sticky notes. You can give each note a title, pick from ten colors, assign a status to track progress, and edit or delete notes at any time — all from one focused interface.
+
+## Create a New Note
+
+<Steps>
+  <Step title="Open the Add Note dialog">
+    Click the **+ Add Note** button, or press <kbd>N</kbd> on your keyboard to open the new-note dialog.
+  </Step>
+  <Step title="Write your content">
+    Type your note text in the **Content** field. Content is required — the Save button stays disabled until you add something. You can write up to **1,500 characters**. Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or <kbd>⌘</kbd>+<kbd>Enter</kbd> on macOS) to save without reaching for the mouse.
+  </Step>
+  <Step title="Add an optional title">
+    Type a short label in the **Title** field (up to 20 characters). Titles appear bold at the top of the note card on your board.
+  </Step>
+  <Step title="Choose a color">
+    Select one of the ten color swatches: **yellow**, **pink**, **blue**, **green**, **purple**, **orange**, **teal**, **lavender**, **peach**, or **mint**. The selected swatch is highlighted with a border and scaled up slightly.
+  </Step>
+  <Step title="Set a status">
+    Click a status badge — **To-Do**, **Doing**, or **Done** — to set the note's initial status. The default is **To-Do**.
+  </Step>
+  <Step title="Save">
+    Click **Save Note**. Your new note appears on the board immediately.
+  </Step>
+</Steps>
+
+## Edit a Note
+
+Click any note card on your board to open it in the detail view. From there you can update:
+
+- The **title** and **content**
+- The **color**
+- The **status**
+
+When you're done making changes, click **Save Changes** to save. If you close the dialog without saving, Stickee will ask whether you want to save or discard your edits.
+
+## Delete a Note
+
+<Warning>
+  Deleting a note permanently removes it. This action cannot be undone.
+</Warning>
+
+1. Click the note you want to delete to open its detail dialog.
+2. Select the **Delete** option inside the dialog.
+3. Confirm the deletion when prompted.
+
+<Tip>
+  Consider using **Archive** instead of Delete if there's any chance you'll want the note later. Archived notes are hidden from your board but remain accessible in the Archive view.
+</Tip>
+
+## Note Attributes
+
+Every note in Stickee is made up of the following fields:
+
+<ParamField path="title" type="string">
+  An optional short label displayed at the top of the note card. Maximum **20 characters**.
+</ParamField>
+
+<ParamField path="content" type="string" required>
+  The main body text of the note. This field is required. Maximum **1,500 characters**.
+</ParamField>
+
+<ParamField path="color" type="string">
+  The background color of the note card. Choose from ten options: `yellow`, `pink`, `blue`, `green`, `purple`, `orange`, `teal`, `lavender`, `peach`, or `mint`.
+</ParamField>
+
+<ParamField path="status" type="string">
+  The current progress state of the note. One of `To-Do`, `Doing`, or `Done`. Defaults to `To-Do`.
+</ParamField>
+
+<ParamField path="pinned" type="boolean">
+  When `true`, the note is pinned and always appears at the top of your board, regardless of sort order.
+</ParamField>
+
+<ParamField path="archived" type="boolean">
+  When `true`, the note is hidden from the main board and moved to the Archive. Archived notes are not deleted.
+</ParamField>
+
+<Note>
+  Your notes are stored securely. Only you can access them.
+</Note>

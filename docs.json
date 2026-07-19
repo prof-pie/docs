@@ -1,0 +1,86 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Stickee",
+  "theme": "linden",
+  "colors": {
+    "primary": "#f5e9be",
+    "light": "#8c7a6c",
+    "dark": "#766045"
+  },
+  "favicon": {
+    "light": "/images/128x128@2x.png",
+    "dark": "/images/128x128@2x.png"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Notes",
+            "pages": [
+              "notes/creating-notes",
+              "notes/organizing-notes",
+              "notes/statuses",
+              "notes/pinning-archiving"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/checklists",
+              "features/voice-input",
+              "features/search",
+              "features/emoji-reactions",
+              "features/quick-note"
+            ]
+          },
+          {
+            "group": "Customization",
+            "pages": [
+              "customization/themes",
+              "customization/fonts",
+              "customization/note-colors"
+            ]
+          },
+          {
+            "group": "Data & Settings",
+            "pages": [
+              "data/export-import",
+              "data/encryption",
+              "settings/keyboard-shortcuts",
+              "settings/desktop-app"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/128x128@2x.png",
+    "dark": "/images/128x128@2x.png"
+  },
+  "description": "A modern web and desktop application for managing and organizing your digital sticky notes and tasks in an easy and fun way.",
+  "icons": {
+    "library": "tabler"
+  },
+  "navbar": {
+    "links": []
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/slammers001/stickee"
+    }
+  },
+  "search": {
+    "prompt": "How do I ..."
+  }
+}

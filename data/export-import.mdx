@@ -1,0 +1,135 @@
+---
+title: "Export and Import Your Notes, Checklists, and Reactions"
+sidebarTitle: "Export & Import"
+description: "Download your Stickee notes, archived notes, checklists, and reactions as a JSON file, and reimport them to restore or migrate your board."
+---
+
+Stickee lets you export all your data as a portable JSON file and import it back at any time — making it easy to back up your notes, migrate to a new device, or restore a previous snapshot of your board.
+
+## Exporting Your Data
+
+<Steps>
+  <Step title="Open Settings">
+    Click the **Settings** icon in the top-right corner of your board, then select the **Data** tab.
+  </Step>
+  <Step title="Click Export Data">
+    Under **Export All Data**, click the **Export Data to JSON** button.
+  </Step>
+  <Step title="Save the file">
+    Stickee automatically downloads a file named `stickee-export-YYYY-MM-DD.json` (for example, `stickee-export-2024-01-15.json`) to your computer.
+  </Step>
+</Steps>
+
+### What the Export Includes
+
+Your export file contains a complete snapshot of your Stickee account:
+
+<CardGroup cols={2}>
+  <Card title="Active Notes" icon="note-sticky">
+    Every note currently visible on your board, including its content, color, status, and pinned state.
+  </Card>
+  <Card title="Archived Notes" icon="box-archive">
+    All notes you have previously archived, preserved with their archived status.
+  </Card>
+  <Card title="Checklist Items" icon="list-check">
+    All checklist tasks and their completion states from your checklist panel.
+  </Card>
+  <Card title="Emoji Reactions" icon="face-smile">
+    The emoji reactions and their counts for every note at the time of export.
+  </Card>
+</CardGroup>
+
+## Export File Format
+
+Stickee exports a structured JSON file. Here is what a typical export looks like:
+
+```json
+{
+  "user": {
+    "id": "...",
+    "displayName": "...",
+    "exportDate": "2024-01-15T10:30:00.000Z"
+  },
+  "notes": [
+    {
+      "id": "...",
+      "title": "Meeting notes",
+      "content": "Discussed Q4 plans...",
+      "color": "blue",
+      "status": "Done",
+      "pinned": false,
+      "created_at": "2024-01-10T08:00:00.000Z",
+      "updated_at": 1705478400000,
+      "archived": false,
+      "archived_at": null
+    }
+  ],
+  "checklistItems": [
+    {
+      "id": "...",
+      "text": "Review Q4 report",
+      "completed": false,
+      "created_at": "2024-01-10T09:00:00.000Z"
+    }
+  ],
+  "reactions": [...]
+}
+```
+
+<Accordion title="Field reference">
+  | Field | Description |
+  |---|---|
+  | `user.id` | Your unique Stickee account ID |
+  | `user.displayName` | Your display name at the time of export |
+  | `user.exportDate` | ISO 8601 timestamp of when the export was created |
+  | `notes[].id` | Unique note identifier |
+  | `notes[].title` | Optional note title (may be absent if no title was set) |
+  | `notes[].content` | The body text of the note |
+  | `notes[].color` | Note color (e.g. `"blue"`, `"yellow"`) |
+  | `notes[].status` | One of `"To-Do"`, `"Doing"`, `"Done"`, or `"Backlog"` |
+  | `notes[].pinned` | `true` if the note was pinned to the top of your board |
+  | `notes[].created_at` | ISO 8601 creation timestamp |
+  | `notes[].updated_at` | Unix millisecond timestamp of the last update |
+  | `notes[].archived` | `true` if the note is in your archive |
+  | `notes[].archived_at` | ISO 8601 timestamp of when the note was archived (present only on archived notes) |
+  | `checklistItems[].id` | Unique checklist item identifier |
+  | `checklistItems[].text` | Text of the checklist task |
+  | `checklistItems[].completed` | `true` if the task was checked off |
+  | `checklistItems[].created_at` | ISO 8601 creation timestamp of the checklist item |
+  | `reactions[].noteId` | The note the reaction belongs to |
+  | `reactions[].emoji` | The emoji character |
+  | `reactions[].count` | How many times that emoji was reacted |
+</Accordion>
+
+## Importing Data
+
+<Steps>
+  <Step title="Open Settings">
+    Click the **Settings** icon, then go to the **Data** tab.
+  </Step>
+  <Step title="Select your export file">
+    Under **Import Data**, click the upload area (or drag and drop) and select your `.json` export file.
+  </Step>
+  <Step title="Wait for validation">
+    Stickee validates the file structure before importing. If the file is not a valid Stickee export, you will see an error message — the import will not proceed with a corrupt or unrelated file.
+  </Step>
+  <Step title="Refresh your board">
+    Once the import succeeds, Stickee adds all the imported notes and checklist items to your board. Refresh the page to see them appear.
+  </Step>
+</Steps>
+
+<Note>
+  Reactions are not re-imported. Because reactions are tied to specific note IDs, they cannot be reliably attached to notes created during an import. Your exported file still contains a record of them for your reference.
+</Note>
+
+<Note>
+  Archived notes in your export file are restored as archived — they will not appear on your main board but will be available in **Archived Notes**.
+</Note>
+
+<Warning>
+  Importing does **not** replace your existing notes. Stickee adds all imported notes alongside your current ones. If you import the same file twice, you will end up with duplicate notes. Always check your board before importing.
+</Warning>
+
+<Tip>
+  Export your data regularly as a personal backup — especially before making large changes to your board. Store the file somewhere safe, such as cloud storage or an external drive.
+</Tip>
