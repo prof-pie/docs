@@ -3,9 +3,9 @@
   "name": "Stickee",
   "theme": "linden",
   "colors": {
-    "primary": "#f5e9be",
-    "light": "#8c7a6c",
-    "dark": "#766045"
+    "primary": "#d4a574",
+    "light": "#8b5a2b",
+    "dark": "#5c3d1e"
   },
   "favicon": {
     "light": "/images/128x128@2x.png",
