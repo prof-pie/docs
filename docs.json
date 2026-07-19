@@ -26,6 +26,7 @@
           {
             "group": "Notes",
             "pages": [
+              "notes/board",
               "notes/creating-notes",
               "notes/organizing-notes",
               "notes/statuses",
